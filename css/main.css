@@ -40,3 +40,11 @@ button i {
     filter: brightness(0.5);
     filter: saturate(0);
 }
+
+#background {
+    position: absolute;
+    z-index: -1;
+    filter: blur(.625rem);
+    height: 100%;
+    width: 100%;
+}

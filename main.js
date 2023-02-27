@@ -5,6 +5,7 @@ const imgCol = document.querySelector('.col-lg');
 const thumbnails = document.querySelector('.thumbnails');
 const previousBtn = document.getElementById('prev');
 const nextBtn = document.getElementById('next');
+const backgroundImage = document.getElementById('background')
 
 // Creo un array che contiene il nome delle immagini
 const images = ['01', '02', '03', '04', '05'];
@@ -43,12 +44,14 @@ nextBtn.addEventListener('click',
             actualImgIndex++;
             carouselImgs[actualImgIndex].classList.remove('d-none');
             thumbnailsImgs[actualImgIndex].classList.remove('grayed')
+            backgroundImage.src = `img/0${actualImgIndex + 1}.webp`
         } else {
             carouselImgs[actualImgIndex].classList.add('d-none');
             thumbnailsImgs[actualImgIndex].classList.add('grayed')
             actualImgIndex = 0; // Porto l'indice alla prima immagine
             carouselImgs[actualImgIndex].classList.remove('d-none');
             thumbnailsImgs[actualImgIndex].classList.remove('grayed')
+            backgroundImage.src = `img/0${1}.webp`
         }
     }
 )
@@ -63,12 +66,14 @@ previousBtn.addEventListener('click',
             actualImgIndex--;
             carouselImgs[actualImgIndex].classList.remove('d-none');
             thumbnailsImgs[actualImgIndex].classList.remove('grayed')
+            backgroundImage.src = `img/0${actualImgIndex + 1}.webp`
         } else {
             carouselImgs[actualImgIndex].classList.add('d-none');
             thumbnailsImgs[actualImgIndex].classList.add('grayed')
-            actualImgIndex = carouselImgs.length -1; // Porto l'indice all'ultima immagine
+            actualImgIndex = carouselImgs.length - 1; // Porto l'indice all'ultima immagine
             carouselImgs[actualImgIndex].classList.remove('d-none');
             thumbnailsImgs[actualImgIndex].classList.remove('grayed')
+            backgroundImage.src = `img/0${carouselImgs.length}.webp`
         }
     }
 )
