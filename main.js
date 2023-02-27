@@ -41,7 +41,7 @@ nextBtn.addEventListener('click',
 // Rispondo al click del btn prev
 previousBtn.addEventListener('click',
     function(){
-        // Mi assicuro di poter diminuire il valore di actualImgIndex in base al numero delle immagini
+        // Mi assicuro di poter diminuire il valore di actualImgIndex in modo da fermarmi alla prima immagine
         if (actualImgIndex > 0) {
             carouselImgs[actualImgIndex].classList.add('d-none')
             actualImgIndex--
