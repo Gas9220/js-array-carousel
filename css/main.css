@@ -1,7 +1,31 @@
 .container {
-    margin: 6.25rem auto;
-    height: 25rem;
+    margin: 3.125rem auto;
     width: 70%;
     background-color: rgb(28, 165, 250);
-    border-radius: 2.5rem;
+    border-radius: 2rem;
+    padding: 1.25rem;
+    justify-content: space-between;
+}
+
+main {
+    height: calc(100vh - 4.375rem);
+}
+
+.col-lg {
+    width: 70%;
+}
+
+.carusel-photo {
+    width: 100%;
+    border-radius: 1.875rem;
+}
+
+.col-sm {
+    width: 10%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+button i {
+    font-size: 1.875rem;
 }
