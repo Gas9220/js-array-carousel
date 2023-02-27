@@ -1,18 +1,15 @@
 .container {
     margin: 3.125rem auto;
-    width: 70%;
+    max-width: 37.5rem;
     background-color: rgb(28, 165, 250);
     border-radius: 2rem;
     padding: 1.25rem;
-    justify-content: space-between;
-}
-
-main {
-    height: calc(100vh - 4.375rem);
+    align-items: center;
 }
 
 .col-lg {
-    width: 70%;
+    width: 75%;
+    max-height: 80%;
 }
 
 .carusel-photo {
@@ -21,11 +18,25 @@ main {
 }
 
 .col-sm {
-    width: 10%;
+    max-height: 80%;
+    width: 20%;
     flex-direction: column;
     justify-content: space-between;
+    margin-left: auto;
 }
 
 button i {
     font-size: 1.875rem;
+}
+
+.thumbnail {
+    width: 100%;
+    border-radius: 1.25rem;
+    margin-top: .1875rem;
+    margin-bottom: .1875rem;
+}
+
+.grayed {
+    filter: brightness(0.5);
+    filter: saturate(0);
 }
