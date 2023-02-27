@@ -31,9 +31,13 @@ nextBtn.addEventListener('click',
     function(){
         // Mi assicuro di poter aumentare il valore di actualImgIndex in base al numero delle immagini
         if (actualImgIndex < carouselImgs.length - 1) {
-            carouselImgs[actualImgIndex].classList.add('d-none')
-            actualImgIndex++
-            carouselImgs[actualImgIndex].classList.remove('d-none')
+            carouselImgs[actualImgIndex].classList.add('d-none');
+            actualImgIndex++;
+            carouselImgs[actualImgIndex].classList.remove('d-none');
+        } else {
+            carouselImgs[actualImgIndex].classList.add('d-none');
+            actualImgIndex = 0; // Porto l'indice alla prima immagine
+            carouselImgs[actualImgIndex].classList.remove('d-none');
         }
     }
 )
@@ -43,9 +47,13 @@ previousBtn.addEventListener('click',
     function(){
         // Mi assicuro di poter diminuire il valore di actualImgIndex in modo da fermarmi alla prima immagine
         if (actualImgIndex > 0) {
-            carouselImgs[actualImgIndex].classList.add('d-none')
-            actualImgIndex--
-            carouselImgs[actualImgIndex].classList.remove('d-none')
+            carouselImgs[actualImgIndex].classList.add('d-none');
+            actualImgIndex--;
+            carouselImgs[actualImgIndex].classList.remove('d-none');
+        } else {
+            carouselImgs[actualImgIndex].classList.add('d-none');
+            actualImgIndex = carouselImgs.length -1; // Porto l'indice all'ultima immagine
+            carouselImgs[actualImgIndex].classList.remove('d-none');
         }
     }
 )
